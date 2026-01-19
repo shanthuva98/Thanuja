@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Friendship Celebration 🎆</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FIREWORK CANVAS -->
+<canvas id="fireworks"></canvas>
+
+<!-- LOCK SCREEN -->
+<div class="lock">
+  <div class="lock-box">
+    <h1>🎆 Friendship Festival 🎆</h1>
+    <p>
+      This is not a normal gift.<br>
+      This is a celebration of our friendship 💙
+    </p>
+
+    <div class="icons">💙 ✨ 🎉 🫂 🎆 ✨ 💙</div>
+
+    <input type="password" id="password" placeholder="Enter Birthday (DDMM)">
+    <button onclick="unlock()">Start Celebration 🚀</button>
+
+    <span id="error"></span>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content" class="hidden">
+
+<section class="hero">
+  <h1>🎉 Happy Birthday Thanuja 🎉</h1>
+  <p>
+    Lights are not enough,<br>
+    because our friendship itself shines ✨
+  </p>
+</section>
+
+<section class="card glow bounce">
+  <h2>🫂 Our Friendship Story</h2>
+  <p>
+    We laughed loudly.<br>
+    We stayed silently.<br>
+    We fought honestly.<br>
+    And we never walked away.
+  </p>
+  <p>
+    That is what makes this friendship special.
+  </p>
+</section>
+<section class="card colorful">
+  <h2>📸 Our Memories</h2>
+  <p>
+    These are not just photos.<br>
+    These are moments that made our friendship stronger 💙
+  </p>
+
+  <div class="gallery">
+    <img src="images/img1.jpeg" alt="Friendship memory 1">
+    <img src="images/img2.jpeg" alt="Friendship memory 2">
+    <img src="images/img3.jpeg" alt="Friendship memory 3">
+    <img src="images/img4.jpeg" alt="Friendship memory 4">
+  </div>
+</section>
+
+
+<section class="card colorful bounce">
+  <h2>💙 Why You Are My Best Friend</h2>
+  <ul>
+    <li>You understand without explanation</li>
+    <li>You stay even when it’s difficult</li>
+    <li>You protect my peace</li>
+    <li>You make life lighter</li>
+    <li>You are family by heart</li>
+  </ul>
+</section>
+
+<section class="card glow">
+  <h2>💬 From My Heart</h2>
+  <p id="typeText"></p>
+</section>
+
+
+<section class="final">
+  <h1>🎆 THANK YOU 🎆</h1>
+  <p>
+    Thank you for being my best friend.<br>
+    Thank you for being YOU.
+  </p>
+  <p class="sign">–💙 Thuvarahan 💙</p>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

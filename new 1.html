@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Friendship Festival 💙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #60a5fa, #f472b6, #a78bfa);
+  background-size: 300% 300%;
+  animation: bgMove 10s infinite alternate;
+  color: white;
+  overflow-x: hidden;
+}
+
+@keyframes bgMove {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+.hidden { display: none; }
+
+/* ===== LOCK SCREEN ===== */
+.lock {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lock-box {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 80px rgba(255,255,255,0.5);
+  animation: zoomIn 1s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lock-box h1 {
+  font-size: 30px;
+}
+
+.lock-box input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.lock-box button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  background: #fde047;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#error {
+  color: #ffd1d1;
+  margin-top: 10px;
+}
+
+/* ===== CONTENT ===== */
+.hero {
+  padding: 90px 20px;
+  text-align: center;
+  animation: fadeDown 1.2s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; }
+}
+
+.card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; }
+}
+
+.card ul {
+  text-align: left;
+}
+
+.card li {
+  margin: 8px 0;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* ===== TYPEWRITER ===== */
+#typeText {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ===== FINAL ===== */
+.final {
+  background: linear-gradient(to right, #f59e0b, #ef4444);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sign {
+  font-size: 22px;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOCK SCREEN -->
+<div class="lock">
+  <div class="lock-box">
+    <h1>🎆 Friendship Celebration 🎆</h1>
+    <p>This website is full of memories & friendship 💙</p>
+
+    <input type="password" id="password" placeholder="Enter Birthday (DDMM)">
+    <button onclick="unlock()">Start Celebration 🎉</button>
+
+    <div id="error"></div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content" class="hidden">
+
+<section class="hero">
+  <h1>🎉 Happy Birthday Tanuja 🎉</h1>
+  <p>Our friendship deserves colors, lights and memories ✨</p>
+</section>
+
+<section class="card">
+  <h2>🫂 Our Friendship</h2>
+  <p>
+    We laughed without reason.  
+    We stayed without conditions.  
+    We became family without trying.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💙 Why You Matter</h2>
+  <ul>
+    <li>You understand me deeply</li>
+    <li>You stay even in silence</li>
+    <li>You make life lighter</li>
+    <li>You are my constant</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>📸 Our Memories</h2>
+
+  <!-- REAL IMAGES ADDED -->
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+  </div>
+</section>
+
+<section class="card">
+  <h2>💬 From My Heart</h2>
+  <p id="typeText"></p>
+</section>
+
+<section class="final">
+  <h1>💖 THANK YOU 💖</h1>
+  <p>
+    Thank you for being my best friend.<br>
+    This friendship is forever.
+  </p>
+  <p class="sign">– Dhuvaragan 💙</p>
+</section>
+
+</div>
+
+<script>
+function unlock() {
+  const input = document.getElementById("password").value.trim();
+  if (input === "1702") {
+    document.querySelector(".lock").style.display = "none";
+    document.getElementById("content").classList.remove("hidden");
+    typeWriter();
+  } else {
+    document.getElementById("error").innerText = "Try 1702 🙂";
+  }
+}
+
+const text =
+"You are not just my best friend.\n" +
+"You are my happiness, my support.\n\n" +
+"Our friendship is colorful,\n" +
+"just like this celebration 💙";
+
+let i = 0;
+function typeWriter() {
+  const el = document.getElementById("typeText");
+  if (i < text.length) {
+    el.innerHTML += text[i] === "\n" ? "<br>" : text[i];
+    i++;
+    setTimeout(typeWriter, 40);
+  }
+}
+</script>
+
+</body>
+</html>
